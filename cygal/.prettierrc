@@ -3,5 +3,7 @@
   "svelteStrictMode": true,
   "svelteBracketNewLine": false,
   "svelteAllowShorthand": false,
-  "svelteIndentScriptAndStyle": false
+  "svelteIndentScriptAndStyle": false,
+  "singleQuote": true,
+  "trailingComma": "all"
 }

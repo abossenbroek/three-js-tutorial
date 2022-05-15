@@ -68,7 +68,7 @@ export default {
 		sucrase({
 			exclude: ['node_modules/**'],
 			transforms: ['typescript']
-		})
+		}),
 
 		// In dev mode, call `npm run start` once
 		// the bundle has been generated

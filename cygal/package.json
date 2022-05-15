@@ -1,6 +1,7 @@
 {
   "author": "Anton Bossenbroek <anton.bossenbroek@gmail.com>",
   "dependencies": {
+    "@types/three": "^0.140.0",
     "sirv": "^2.0.2",
     "sirv-cli": "^2.0.2",
     "svelte-i18n": "^3.4.0",
@@ -20,6 +21,7 @@
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-svelte3": "^4.0.0",
     "prettier": "^2.6.2",
     "prettier-plugin-svelte": "^2.7.0",
     "rollup": "^2.73.0",
@@ -45,7 +47,9 @@
     "build": "rollup -c",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "dev": "rollup -c -w",
-    "lint": "eslint \"{src,test}/**/*.{ts,js}\"",
+    "lint": "eslint \"{src,test}/**/*.{ts,js,svelte}\"",
+    "lint-fix": "eslint --fix \"{src,test}/**/*.{ts,js,svelte}\"",
+    "prettier": "prettier --write --plugin-search-dir=. \"{src,test}/**/*.{ts,js,svelte}\"",
     "start": "sirv public --no-clear"
   },
   "version": "0.0.1"

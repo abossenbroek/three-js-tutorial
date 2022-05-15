@@ -26,3 +26,13 @@ repos:
        -   eslint-config-airbnb-typescript@17.0.0
        -   eslint-plugin-import@2.26.0
        -   eslint-plugin-prettier@4.0.0
+ - repo: local
+   hooks:
+   -   id: eslint
+       name: Check with ESLint
+       entry: bash -c 'cd cygal && yarn lint-fix'
+       language: node
+   -   id: prettier
+       name: Fix with Prettier
+       entry: bash -c 'cd cygal && yarn prettier'
+       language: node
