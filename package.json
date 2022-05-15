@@ -1,0 +1,8 @@
+{
+  "author": "Anton Bossenbroek <anton.bossenbroek@gmail.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "global-cygal-package",
+  "repository": "git@github.com:abossenbroek/three-js-tutorial.git",
+  "version": "1.0.0"
+}
