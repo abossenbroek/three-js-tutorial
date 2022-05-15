@@ -1,0 +1,28 @@
+---
+repos:
+ - repo: https://github.com/pre-commit/pre-commit-hooks
+   rev: v2.3.0
+   hooks:
+    -   id: check-yaml
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+    -   id: pretty-format-json
+        args: [--autofix]
+    -   id: check-case-conflict
+    -   id: check-merge-conflict
+    -   id: end-of-file-fixer
+    -   id: mixed-line-ending
+ - repo: https://github.com/pre-commit/mirrors-eslint
+   rev: v8.15.0
+   hooks:
+   -   id: eslint
+       stages: [push]
+       files: \.[jt]sx?$  # *.js, *.jsx, *.ts and *.tsx
+       types: [file]
+       additional_dependencies:
+       -   eslint@8.15.0
+       -   eslint-loader@1.6.1
+       -   eslint-config-airbnb-base@15.0.0
+       -   eslint-config-airbnb-typescript@17.0.0
+       -   eslint-plugin-import@2.26.0
+       -   eslint-plugin-prettier@4.0.0
