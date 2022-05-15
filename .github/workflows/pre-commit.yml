@@ -1,0 +1,22 @@
+name: pre-commit
+
+on:
+  pull_request:
+  push:
+    branches: [main, develop]
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+    - name: Setup Nodejs with yarn caching
+      uses: actions/setup-node@v2
+      with:
+        node-version: "18"
+        cache: yarn
+    - name: Install local dependencies
+      run: cd cygal && yarn
+    - name: Run pre-commit
+      uses: pre-commit/action@v2.0.3
