@@ -30,10 +30,7 @@ bower_components
 # Ignore built ts files
 dist/**/*
 
-# ignore yarn.lock
-yarn.lock
 node_modules
-package-lock.json
 
 ### end Typescript & Rollup ###
 
