@@ -1,10 +1,10 @@
 <script lang="ts">
 import { onMount } from 'svelte';
-import { createScene } from './scene';
 
 let el: HTMLCanvasElement;
 
-onMount(() => {
+onMount(async () => {
+  const { createScene } = await import('./scene');
   createScene(el);
 });
 </script>

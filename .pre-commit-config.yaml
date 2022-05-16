@@ -28,11 +28,11 @@ repos:
        -   eslint-plugin-prettier@4.0.0
  - repo: local
    hooks:
-   -   id: eslint
-       name: Check with ESLint
-       entry: bash -c 'cd cygal && yarn lint-fix'
-       language: node
    -   id: prettier
        name: Fix with Prettier
-       entry: bash -c 'cd cygal && yarn prettier'
+       entry: bash -c 'cd cygal && yarn format'
+       language: node
+   -   id: eslint
+       name: Check with ESLint
+       entry: bash -c 'cd cygal && yarn lint'
        language: node

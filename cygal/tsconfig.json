@@ -1,11 +1,13 @@
 {
-  "exclude": [
-    "node_modules/*",
-    "__sapper__/*",
-    "public/*"
-  ],
-  "extends": "@tsconfig/svelte/tsconfig.json",
-  "include": [
-    "src/**/*"
-  ]
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true
+  },
+  "extends": "./.svelte-kit/tsconfig.json"
 }
